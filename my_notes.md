@@ -2,27 +2,53 @@
 
 ##1st Implementation, Single user
 
-1. Paste URL with recipe
-2. Attempt to parse recipe
-	- Find recipe name
-	- Find recipe photo
-	- Find recipe ingredients
-	- Find ingrediant quantities
-3. Parse
-4. Display 
- 	- All Recipies (Masonry??)
- 	- Single Recipe
- 		-- Simple Ingredient list
+1. Paste recipe URL
+2. Save URL to account
+3. Display... 
+ 	- All recipes by title (Masonry gem??)
+ 	- Single recipe
+ 		- Display <body> of source URL
 
 
-###Tables
-- Recipes
-	-- Recipe Name
-	-- Source URL
-	-- Picture
-	-- Ingredients with quantities
+##Tables/Models
+- ###Recipes
+	- Recipe Name
+	- Source URL
+	- **Source domain** (All Recipies, Food Network, etc.)
+	- Picture
+	- **Ingredients with quantities**
 	
-- Tags
-	- Ingrediants
+- ###Tags
+	- **Ingredients**
 
-	
+- ###Domains
+	- Domain
+
+- ###Ingredients
+	- Ingrediant
+	- Quantity
+	- Recipe
+
+
+##2nd Implementation
+	1. Paste recipe URL
+	2. Build parseing logic -
+		- Attempt to parse html for recipe info and save to records
+			- Find recipe name
+			- Find recipe photo
+			- Find recipe ingredients
+			- Find ingredient quantities
+	3. Display... 
+		- All Recipies (Masonry gem??)
+ 		- Single Recipe
+ 			- Simple ingredient list
+ 			- Picture
+ 			- Tags
+ 			- Instructions/source URL content
+
+
+##3rd Implementation
+	1. Get URL from bookmarklet
+	2. Add user model
+
+
