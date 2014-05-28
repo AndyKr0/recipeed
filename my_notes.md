@@ -3,6 +3,7 @@
 ##1st Implementation, Single user
 
 1. Paste recipe URL
+	- Pull <title> to auto fill into form (mechanize? piso?)
 2. Save URL to account
 3. Display... 
  	- All recipes by title (Masonry gem??)
