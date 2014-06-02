@@ -1,4 +1,7 @@
 class RecipesController < ApplicationController
+  require 'open-uri'
+  require 'nokogiri'
+
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   # GET /recipes
@@ -24,7 +27,9 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
 
     if @recipe.save
-      redirect_to @recipe, notice: 'Recipe was successfully created.'
+      @recipe.title = scrape(@recipe.url, "title")
+      render :edit, notice: 'Recipe initiated.'
+
     else
       render :new
     end
@@ -45,6 +50,13 @@ class RecipesController < ApplicationController
     redirect_to recipes_url, notice: 'Recipe was successfully destroyed.'
   end
 
+  #Scrape URL
+  def scrape(url, tag)
+    doc = Nokogiri::HTML(open(url))
+    return doc.css(tag).text.strip.titleize
+  end
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
@@ -53,6 +65,6 @@ class RecipesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def recipe_params
-      params.require(:recipe).permit(:title, :url)
+      params.require(:recipe).permit(:url, :title, :user_name)
     end
 end
