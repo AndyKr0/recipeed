@@ -15,5 +15,10 @@
   <%= @recipe.user_name %>
 </p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<div id="tags">
+  <h4>Tags</h4>
+	<%= render @recipe.tags %>
+</div>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> 
 <%= link_to 'Back', recipes_path %>
