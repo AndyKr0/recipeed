@@ -14,7 +14,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'nokogiri', '~> 1.6.2.1'
 gem 'acts-as-taggable-on', '~> 3.2.3'
-gem 'turbolinks'
 gem 'mechanize'
 
 

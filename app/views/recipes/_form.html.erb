@@ -25,12 +25,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :tag_names %>
-    <%= f.text_field :tag_names %>
+    <%= render "/tags/form", f: f %>
   </div>
 
+  
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
