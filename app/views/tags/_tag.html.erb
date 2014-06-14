@@ -5,7 +5,6 @@
       <%= link_to "x",
         remove_recipe_tag_path(@recipe, tag),
         method: :delete,
-        #remote: true,
         id: "delete-#{tag.name.parameterize}" %>
      </sup> 
     <%= tag.name %>
