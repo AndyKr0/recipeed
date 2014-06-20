@@ -1,3 +1,4 @@
+<% provide(:title, @recipe.title) %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,5 +21,5 @@
 	<%= render @recipe.tags %>
 </div>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> 
+<%= link_to 'Edit', edit_recipe_path(@recipe) %>
 <%= link_to 'Back', recipes_path %>

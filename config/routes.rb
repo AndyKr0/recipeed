@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
   root 'recipes#index'
   resources :recipes do
     resources :tags do
       member do
         delete :remove
-      end 
+      end
     end
   end
 
