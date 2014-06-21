@@ -8,13 +8,14 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'simple_form'
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'nokogiri', '~> 1.6.2.1'
 gem 'acts-as-taggable-on', '~> 3.2.3'
 gem 'mechanize'
+gem 'sprockets', '2.11.0'
 
 
 group :development, :test do
@@ -24,7 +25,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
-  
+
 end
 
 group :test do
