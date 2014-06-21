@@ -57,7 +57,7 @@ class RecipesController < ApplicationController
   #Scrape URL
   def scrape(url, tag)
     doc = Nokogiri::HTML(open(url))
-    return doc.css(tag).text.strip.titleize
+    return doc.css(tag).text.strip.chomp("Allrecipes.com").titleize.strip
   end
   
   #Scrape AllRecipes - this only works on allrecipes.com
