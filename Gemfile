@@ -17,6 +17,11 @@ gem 'acts-as-taggable-on', '~> 3.2.3'
 gem 'mechanize'
 gem 'sprockets', '2.11.0'
 
+group :production do
+  #gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+end
+ 
 
 group :development, :test do
   gem 'spring'
